@@ -1,0 +1,74 @@
+/* Google fonts - Open Sans */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+text {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.9);
+    font-family: "Open Sans", sans-serif;
+  }
+
+table {
+    border-spacing: 0.05em;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+th {
+    background-color: rgba(102, 102, 102, 0.9);
+    color: rgba(255, 255, 255, 0.9);
+    height: 50px;
+    font-size: 18px;
+  }
+
+td {
+    color: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.1);
+    padding-left: 5px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+hr {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 0.5px;
+    border: 0;
+}
+
+caption {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 16px;
+}
+
+.container {
+    width: 710px;
+    margin: 10px;
+}
+
+.winning-strick {
+    width: 50%;
+    float: left;
+    padding-right: 30px;
+    position: relative;
+}
+
+.biggest-odd {
+    width: 30%;
+    float: left;
+}
+
+.th-nickname {
+      width: 140px;
+  }
+
+.place {
+    width: 30px;
+}
+
+.odds {
+    width: 40px;
+}
+
