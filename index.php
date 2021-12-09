@@ -169,6 +169,49 @@ echo "</div>";
 
 echo "<hr align='left' width='700px'>";
 
+echo "<div class='dop-stavki'>";
+echo "<table style='width:315px;'>";
+echo "<caption>Доп. ставки</caption>";
+echo "<tr><th class='th-nickname'>Nickname</th><th>Ставок</th><th>Разница</th></tr>";
+
+class Dop_stavki extends RecursiveIteratorIterator {
+  function __construct($it) {
+    parent::__construct($it, self::LEAVES_ONLY);
+  }
+
+#[\ReturnTypeWillChange]
+  function current() {
+    return "<td>" . parent::current(). "</td>";
+  }
+
+#[\ReturnTypeWillChange]
+  function beginChildren() {
+    echo "<tr>";
+  }
+
+#[\ReturnTypeWillChange]
+  function endChildren() {
+    echo "</tr>" . "\n";
+  }
+}
+
+try {
+  $stmt = $conn->prepare("SELECT * FROM web_dop_stavki order by nickname;");
+  $stmt->execute();
+
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  foreach(new Dop_stavki(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+    echo $v;
+  }
+} catch(PDOException $e) {
+  echo "Error: " . $e->getMessage();
+}
+echo "</table>";
+echo "</div>";
+
+echo "<hr align='left' width='700px'>";
+
 echo "</div>";
 echo "</body>";
 $conn = null;
