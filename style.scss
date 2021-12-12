@@ -44,20 +44,14 @@ caption {
 }
 
 .container {
-    width: 710px;
-    margin: 10px;
+    width: 1000;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 
 .winning-strick {
-    width: 50%;
     float: left;
     padding-right: 30px;
-    position: relative;
-}
-
-.biggest-odd {
-    width: 30%;
-    float: left;
 }
 
 .th-nickname {
@@ -72,3 +66,10 @@ caption {
     width: 40px;
 }
 
+.check-rules-date {
+    width: 80;
+}
+
+.event {
+    width: 300px;
+}
