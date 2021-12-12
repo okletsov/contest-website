@@ -75,6 +75,24 @@ echo "</table>";
 echo "</div>"; 
 // table end
 
+// Future bets
+$result = executeSql($conn, $futureBetsSql);
+if (count($result) > 0) {
+    echo "<hr align='left' width='980px'>";
+    echo "<div class='future-bets'>";
+    echo "<table style='width:980px;'>";
+    echo "<caption>Будущие события</caption>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Scheduled</th><th>Predicted</th></tr>";
+
+  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
+    echo $v;
+  }
+
+  echo "</table>";
+  echo "</div>"; 
+}
+// table end
+
 // Dop stavki
 $result = executeSql($conn, $dopStavkiSql);
 if (count($result) > 0) {
@@ -82,7 +100,7 @@ if (count($result) > 0) {
     echo "<div class='dop-stavki'>";
     echo "<table style='width:315px;'>";
     echo "<caption>Доп. ставки</caption>";
-    echo "<tr><th class='th-nickname'>Nickname</th><th>Ставок</th><th>Разница</th></tr>";
+    echo "<tr><th class='th-nickname'>Nickname</th><th>Bets</th><th>Difference</th></tr>";
     
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
@@ -100,7 +118,7 @@ if (count($result) > 0) {
     echo "<div class='check-rules'>";
     echo "<table style='width:980px;'>";
     echo "<caption>Проверка правил</caption>";
-    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='check-rules-date'>Date</th><th class='event'>Event</th><th>Rule Description</th></tr>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='date'>Scheduled</th><th class='event'>Event</th><th>Rule Description</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
