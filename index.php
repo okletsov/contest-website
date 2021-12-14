@@ -48,7 +48,7 @@ echo "</table>";
 $result = executeSql($conn, $crWinningStrickSql);
 echo "<hr align='left' width='700px'>"; 
 echo "<div class='winning-strick'>";
-echo "<table style='width: 355px;'>";
+echo "<table style='width: 400px;'>";
 echo "<caption>Серия</caption>";
 echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Active</th><th>Avg Odds</th><th>Length</th></tr>";
 
@@ -63,7 +63,7 @@ echo "</div>";
 // Biggest odd
 $result = executeSql($conn, $crBiggestOddSql);
 echo "<div>";
-echo "<table style='width:315px;'>";
+echo "<table style='width:270px;'>";
 echo "<caption>Высший коэффициент</caption>";
 echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='odds'>Odds</th></tr>";
 
