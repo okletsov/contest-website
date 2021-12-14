@@ -50,7 +50,7 @@ echo "<hr align='left' width='700px'>";
 echo "<div class='winning-strick'>";
 echo "<table style='width: 355px;'>";
 echo "<caption>Серия</caption>";
-echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Avg Odds</th><th>Length</th></tr>";
+echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Active</th><th>Avg Odds</th><th>Length</th></tr>";
 
 foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
