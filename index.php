@@ -93,6 +93,24 @@ if (count($result) > 0) {
 }
 // table end
 
+// Recent bets
+$result = executeSql($conn, $recentBetsSql);
+if (count($result) > 0) {
+    echo "<hr align='left' width='980px'>";
+    echo "<div class='recent-bets'>";
+    echo "<table style='width:980px;'>";
+    echo "<caption>Последние результаты (за 24 часа)</caption>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th class='result'>Result</th></tr>";
+
+  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
+    echo $v;
+  }
+
+  echo "</table>";
+  echo "</div>"; 
+}
+// table end
+
 // Dop stavki
 $result = executeSql($conn, $dopStavkiSql);
 if (count($result) > 0) {
