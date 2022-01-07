@@ -44,6 +44,22 @@ foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
 echo "</table>";
 // table end
 
+// Cr raw ongoing 2nd month table
+$result = executeSql($conn, $crRawOngoing2ndMonthSql);
+if (count($result) > 0) {
+  echo "<hr align='left' width='700px'>";
+  echo "<table style='width:700px;'>";
+  echo "<caption>Второй месячный конкурс</caption>";
+  echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Bets</th><th>Days</th><th>Won</th><th>Lost</th><th>Units</th><th>ROI</th></tr>";
+
+  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
+      echo $v;
+  }
+
+  echo "</table>";
+}
+// table end
+
 // Winning strick
 $result = executeSql($conn, $crWinningStrickSql);
 echo "<hr align='left' width='700px'>"; 
@@ -100,7 +116,7 @@ if (count($result) > 0) {
     echo "<div class='recent-bets'>";
     echo "<table style='width:980px;'>";
     echo "<caption>Последние результаты (за 24 часа)</caption>";
-    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th class='result'>Result</th></tr>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='result'>Result</th><th>Odds</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
