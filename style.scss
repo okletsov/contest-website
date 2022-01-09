@@ -52,6 +52,26 @@ a:hover {
     color: rgba(209, 212, 199, 0.9); 
 }
 
+a button {
+    background-color: rgba(102, 102, 102, 0.9);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-right: 5px;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+  }
+
+  a button:hover {
+    background-color: rgba(80, 76, 76, 0.9);
+  }
+
 .container {
     width: 1000;
     margin-right: 10px;
@@ -90,3 +110,7 @@ a:hover {
 .result {
     width: 75px;
 }
+
+.five-contests-points {
+    width: 100px;
+  }

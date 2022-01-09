@@ -30,6 +30,12 @@ foreach(new LastUpdated(new RecursiveArrayIterator($result)) as $k=>$v) {
 }
 //end
 
+// Tabs
+echo "<br>";
+echo "<a href='index.php'><button>Главная</button></a>";
+echo "<a href='rating.php'><button>Рейтинг</button></a>";
+//end
+
 // Cr raw ongoing table
 $result = executeSql($conn, $crRawOngoingSql);
 echo "<hr align='left' width='700px'>";
