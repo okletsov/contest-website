@@ -1,6 +1,6 @@
 <?php
 
-$lastUpdatedSql = "SELECT max(convert_tz(bjl.finish_timestamp , 'UTC', 'Europe/Kiev')) as kiev_runtime from background_job_log bjl;";
+$lastUpdatedSql = "SELECT * from web_last_data_update";
 
 // Home
 $crRawOngoingSql = "SELECT * FROM web_cr_raw_ongoing";
