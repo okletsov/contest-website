@@ -26,7 +26,7 @@ class LastUpdated extends RecursiveIteratorIterator {
 $result = executeSql($conn, $lastUpdatedSql);
 foreach(new LastUpdated(new RecursiveArrayIterator($result)) as $k=>$v) {
     $date = strtotime($v);
-    echo "<text>Обновлено (по Киеву): " . date('j M - H:i', $date) . "</text>";
+    echo "<text>Обновлено (по Киеву): " . date('o, j M - H:i', $date) . "</text>";
 }
 //end
 
