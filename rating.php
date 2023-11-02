@@ -37,18 +37,21 @@ echo "<a href='rating.php'><button>Рейтинг</button></a>";
 //end
 
 // Rating live table
-$result = executeSql($conn, $ratingLiveSql);
-echo "<hr align='left' width='700px'>";
-echo "<table style='width:700px;'>";
-echo "<caption>Рейтинг с учетом мест текущего конкурса</caption>";
-echo "<tr><th class='place' rowspan='2'></th><th class='th-nickname' rowspan='2'>Nickname</th><th colspan='4'>Current contest</th><th class='five-contests-points' rowspan='2'>5 contests points</th><th rowspan='2'>Rating</th></tr>";
-echo "<tr><th>Units</th><th>ROI</th><th>Place</th><th>Points</th></tr>";
+$result = executeSql($conn, $crRawOngoingSql);
+if (count($result) > 0) {
+  $result = executeSql($conn, $ratingLiveSql);
+  echo "<hr align='left' width='700px'>";
+  echo "<table style='width:700px;'>";
+  echo "<caption>Рейтинг с учетом мест текущего конкурса</caption>";
+  echo "<tr><th class='place' rowspan='2'></th><th class='th-nickname' rowspan='2'>Nickname</th><th colspan='4'>Current contest</th><th class='five-contests-points' rowspan='2'>5 contests points</th><th rowspan='2'>Rating</th></tr>";
+  echo "<tr><th>Units</th><th>ROI</th><th>Place</th><th>Points</th></tr>";
 
-foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
-    echo $v;
+  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
+      echo $v;
+  }
+
+  echo "</table>";
 }
-
-echo "</table>";
 // table end
 
 // Rating static
