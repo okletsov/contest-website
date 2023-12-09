@@ -97,13 +97,13 @@ echo "</table>";
 echo "</div>"; 
 // table end
 
-// Future bets
-$result = executeSql($conn, $futureBetsSql);
+// In play bets
+$result = executeSql($conn, $inPlayBetsSql);
 if (count($result) > 0) {
     echo "<hr align='left' width='980px'>";
-    echo "<div class='future-bets'>";
+    echo "<div class='in-play-bets'>";
     echo "<table style='width:980px;'>";
-    echo "<caption>Будущие события</caption>";
+    echo "<caption>Сейчас играют</caption>";
     echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Scheduled</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Predicted</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
@@ -115,13 +115,13 @@ if (count($result) > 0) {
 }
 // table end
 
-// In play bets
-$result = executeSql($conn, $inPlayBetsSql);
+// Future bets
+$result = executeSql($conn, $futureBetsSql);
 if (count($result) > 0) {
     echo "<hr align='left' width='980px'>";
-    echo "<div class='in-play-bets'>";
+    echo "<div class='future-bets'>";
     echo "<table style='width:980px;'>";
-    echo "<caption>Сейчас играют</caption>";
+    echo "<caption>Будущие события</caption>";
     echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Scheduled</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Predicted</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
