@@ -115,6 +115,24 @@ if (count($result) > 0) {
 }
 // table end
 
+// In play bets
+$result = executeSql($conn, $inPlayBetsSql);
+if (count($result) > 0) {
+    echo "<hr align='left' width='980px'>";
+    echo "<div class='in-play-bets'>";
+    echo "<table style='width:980px;'>";
+    echo "<caption>Сейчас играют</caption>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Scheduled</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Predicted</th></tr>";
+
+  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
+    echo $v;
+  }
+
+  echo "</table>";
+  echo "</div>"; 
+}
+// table end
+
 // Recent bets
 $result = executeSql($conn, $recentBetsSql);
 if (count($result) > 0) {
