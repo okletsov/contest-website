@@ -104,7 +104,7 @@ if (count($result) > 0) {
     echo "<div class='future-bets'>";
     echo "<table style='width:980px;'>";
     echo "<caption>Будущие события</caption>";
-    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Scheduled</th><th>Predicted</th></tr>";
+    echo "<tr><th class='place'></th><th>Scheduled</th><th class='th-nickname'>Nickname</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Predicted</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
