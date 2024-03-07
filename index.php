@@ -35,6 +35,7 @@ echo "<br>";
 echo "<a href='index.php'><button>Главная</button></a>";
 echo "<a href='rating.php'><button>Рейтинг</button></a>";
 echo "<a href='https://docs.google.com/document/d/1J3_apsxu_qc3kgWmont9-IJXBZE1fKJg/edit?usp=sharing&ouid=115819350676974187090&rtpof=true&sd=true target='_blank'><button>Регламент</button></a>";
+echo "<a href='results-history.php'><button>История</button></a>";
 //end
 
 // Cr raw ongoing table

@@ -38,36 +38,20 @@ echo "<a href='https://docs.google.com/document/d/1J3_apsxu_qc3kgWmont9-IJXBZE1f
 echo "<a href='results-history.php'><button>История</button></a>";
 //end
 
-// Rating live table
-$result = executeSql($conn, $crRawOngoingSql);
-if (count($result) > 0) {
-  $result = executeSql($conn, $ratingLiveSql);
-  echo "<hr align='left' width='700px'>";
-  echo "<table style='width:700px;'>";
-  echo "<caption>Рейтинг с учетом мест текущего конкурса</caption>";
-  echo "<tr><th class='place' rowspan='2'></th><th class='th-nickname' rowspan='2'>Nickname</th><th colspan='4'>Current contest</th><th class='five-contests-points' rowspan='2'>5 contests points</th><th rowspan='2'>Rating</th></tr>";
-  echo "<tr><th>Units</th><th>ROI</th><th>Place</th><th>Points</th></tr>";
-
-  foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
-      echo $v;
-  }
-
-  echo "</table>";
-}
-// table end
-
-// Rating static
-$result = executeSql($conn, $ratingStaticSql);
+// Results history
+$result = executeSql($conn, $resultsHistory);
 echo "<hr align='left' width='700px'>";
 echo "<table style='width:700px;'>";
-echo "<caption>Рейтинг</caption>";
-echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Cont 1</th><th>Cont 2</th><th>Cont 3</th><th>Cont 4</th><th>Cont 5</th><th>Cont 6</th><th>Rating</th></tr>";
+echo "<caption>История результатов</caption>";
+echo "<tr><th class='place' rowspan='2'></th><th class='th-nickname' rowspan='2'>Contest</th><th class='th-nickname' rowspan='2'>2nd place</th><th class='th-nickname' rowspan='2'>3rd place</th><th class='th-nickname' rowspan='2'>Streak</th><th class='biggest-odds' rowspan='2'>Biggest Odds</th><th colspan='3'>Month 1</th><th colspan='3'>Month 2</th></tr>";
+echo "<tr><th class='th-nickname'>Winner</th><th class='th-nickname'>2nd place</th><th class='th-nickname'>3rd place</th><th class='th-nickname'>Winner</th><th class='th-nickname'>2nd place</th><th class='th-nickname'>3rd place</th></tr>";
 
 foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
 }
 
 echo "</table>";
+
 // table end
 
 echo "</div>";

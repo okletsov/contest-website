@@ -12,6 +12,7 @@ $inPlayBetsSql = "SELECT * from web_in_play_bets;";
 $recentBetsSql = "SELECT * from web_recent_bets;";
 $dopStavkiSql = "SELECT * FROM web_dop_stavki order by nickname;";
 $checkRulesSql = "SELECT * FROM web_check_rules;";
+$resultsHistory = "SELECT * FROM web_results_history;";
 
 // Rating
 $ratingLiveSql = "SELECT * FROM web_rating_live;";
