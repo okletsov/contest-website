@@ -102,11 +102,11 @@ echo "</div>";
 // In play bets
 $result = executeSql($conn, $inPlayBetsSql);
 if (count($result) > 0) {
-    echo "<hr align='left' width='980px'>";
+    echo "<hr align='left' width='700px'>";
     echo "<div class='in-play-bets'>";
-    echo "<table style='width:980px;'>";
+    echo "<table style='width:700px;'>";
     echo "<caption>Сейчас играют</caption>";
-    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Scheduled</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th><th>Predicted</th></tr>";
+    echo "<tr><th class='place'></th><th class='th-nickname'>Nickname</th><th>Time</th><th class='event'>Event</th><th class='market'>Market</th><th>Pick</th><th>Odds</th></tr>";
 
   foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {
     echo $v;
