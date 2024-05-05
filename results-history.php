@@ -43,7 +43,7 @@ $result = executeSql($conn, $resultsHistory);
 echo "<hr align='left' width='1600px'>";
 echo "<table style='width:1600px;'>";
 echo "<caption>История результатов</caption>";
-echo "<tr><th class='place' rowspan='2'></th><th class='th-contest' rowspan='2'>Contest</th><th class='th-nickname' rowspan='2'>Winner</th><th class='th-nickname' rowspan='2'>2nd place</th><th class='th-nickname' rowspan='2'>3rd place</th><th class='th-nickname' rowspan='2'>Streak</th><th class='biggest-odds' rowspan='2'>Biggest Odds</th><th colspan='3'>Month 1</th><th colspan='3'>Month 2</th></tr>";
+echo "<tr><th class='place' rowspan='2'></th><th class='th-contest' rowspan='2'>Contest</th><th class='th-nickname' rowspan='2'>Winner</th><th class='th-nickname' rowspan='2'>2nd place</th><th class='th-nickname' rowspan='2'>3rd place</th><th class='biggest-odds' rowspan='2'>Biggest Odds</th><th class='th-nickname' rowspan='2'>Streak</th><th colspan='3'>Month 1</th><th colspan='3'>Month 2</th></tr>";
 echo "<tr><th class='th-nickname'>Winner</th><th class='th-nickname'>2nd place</th><th class='th-nickname'>3rd place</th><th class='th-nickname'>Winner</th><th class='th-nickname'>2nd place</th><th class='th-nickname'>3rd place</th></tr>";
 
 foreach(new TableBuilder(new RecursiveArrayIterator($result)) as $k=>$v) {

@@ -7,7 +7,19 @@ class TableBuilder extends RecursiveIteratorIterator {
 
 #[\ReturnTypeWillChange]
   function current() {
-    return "<td>" . parent::current(). "</td>";
+    $value = parent::current();
+
+    if (is_numeric($value)) {
+      
+      // Convert to float to remove unnecessary zeros
+      $floatValue = floatval($value);
+      
+      // If the number is a whole number, remove decimal and trailing zeros
+      if ($floatValue == intval($value)) {
+        $value = intval($value);
+      }
+    }
+    return "<td>" . $value . "</td>";
   }
 
 #[\ReturnTypeWillChange]
