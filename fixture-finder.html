@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixture-finder</title>
+    <style>
+        /* Basic responsive styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+        iframe {
+            width: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Embedded iframe -->
+    <iframe id="embeddedFrame" src="https://app.appsmith.com/app/fixture-finder/home-6866ba002612f654e81bea98" frameborder="0"></iframe>
+</div>
+
+<script>
+    // Function to set iframe height to screen height
+    function setIframeHeight() {
+        var iframe = document.getElementById('embeddedFrame');
+        var screenHeight = window.innerHeight;
+        iframe.style.height = screenHeight + 'px';
+    }
+
+    // Call the function initially and on window resize
+    setIframeHeight();
+    window.addEventListener('resize', setIframeHeight);
+</script>
+
+</body>
+</html>
