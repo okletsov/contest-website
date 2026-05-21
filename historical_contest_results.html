@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Исторические результаты конкурсов</title>
+
+  <style>
+    :root {
+      --bg: #0f1117;
+      --card: #181c25;
+      --card-hover: #202633;
+      --text: #f5f7fa;
+      --muted: #8b93a7;
+      --border: #2a3140;
+      --gold: #f7c948;
+      --silver: #c0c7d1;
+      --bronze: #d38b5d;
+      --accent: #4f8cff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 28px;
+      font-size: 0.95rem;
+    }
+
+    .info-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px;
+      margin-bottom: 24px;
+    }
+
+    .info-box h2 {
+      margin-top: 0;
+      font-size: 1.1rem;
+    }
+
+    .info-box p {
+      margin-bottom: 0;
+      color: #d2d7e2;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+
+    thead {
+      background: #131821;
+    }
+
+    th {
+      text-align: left;
+      padding: 16px;
+      font-size: 0.9rem;
+      color: var(--muted);
+      font-weight: 600;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+
+    tbody tr {
+      transition: background 0.15s ease;
+    }
+
+    tbody tr:hover {
+      background: var(--card-hover);
+    }
+
+    .rank {
+      font-weight: 700;
+      width: 70px;
+    }
+
+    .participant {
+      font-weight: 600;
+    }
+
+    .medal {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .silver {
+      color: var(--silver);
+    }
+
+    .bronze {
+      color: var(--bronze);
+    }
+
+    .medal {
+      opacity: 0.98;
+    }
+
+    .medal::first-line {
+      opacity: 1;
+    }
+
+    .participations {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 14px;
+      }
+
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      td,
+      th {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1>Исторические результаты конкурсов</h1>
+
+    <div class="subtitle">
+      Рейтинг участников на основе исторических результатов соревнований.
+    </div>
+
+    <div class="info-box">
+      <h2>Как работает сортировка</h2>
+
+      <p>
+        Участники сортируются в первую очередь по количеству первых мест,
+        затем по количеству вторых мест и после этого по количеству третьих мест.
+      </p>
+
+      <br />
+
+      <p>
+        Если количество первых мест совпадает, используется дополнительный показатель —
+        сумма рейтинговых очков, набранных в конкурсах, которые участник выиграл.
+        Чем выше количество очков, тем сложнее было выиграть соответствующий конкурс,
+        поэтому такие победы ценятся выше.
+      </p>
+    </div>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Участник</th>
+            <th>🥇 Победы</th>
+            <th>🥈 Вторые места</th>
+            <th>🥉 Третьи места</th>
+            <th>Участий</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          
+        <tr>
+          <td class="rank">1</td>
+
+          <td class="participant">ka1manua</td>
+
+          <td>
+            <div class="medal gold">5 (57)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">1 (5)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">1 (6)</div>
+          </td>
+
+          <td class="participations">
+            25
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">2</td>
+
+          <td class="participant">Ars</td>
+
+          <td>
+            <div class="medal gold">4 (43)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">1 (9)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">2 (21)</div>
+          </td>
+
+          <td class="participations">
+            17
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">3</td>
+
+          <td class="participant">Cap4ik</td>
+
+          <td>
+            <div class="medal gold">4 (42)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">5 (40)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">1 (6)</div>
+          </td>
+
+          <td class="participations">
+            32
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">4</td>
+
+          <td class="participant">Ajax</td>
+
+          <td>
+            <div class="medal gold">4 (39)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">6 (54)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">1 (6)</div>
+          </td>
+
+          <td class="participations">
+            36
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">5</td>
+
+          <td class="participant">Dnepr</td>
+
+          <td>
+            <div class="medal gold">3 (32)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">5 (34)</div>
+          </td>
+
+          <td class="participations">
+            20
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">6</td>
+
+          <td class="participant">Deagle</td>
+
+          <td>
+            <div class="medal gold">3 (30)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">4 (30)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">4 (19)</div>
+          </td>
+
+          <td class="participations">
+            35
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">7</td>
+
+          <td class="participant">Zidan98</td>
+
+          <td>
+            <div class="medal gold">2 (25)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">3 (24)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">1 (7)</div>
+          </td>
+
+          <td class="participations">
+            13
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">8</td>
+
+          <td class="participant">JovtoBlakutni</td>
+
+          <td>
+            <div class="medal gold">2 (23)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">2 (18)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">2 (15)</div>
+          </td>
+
+          <td class="participations">
+            23
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">9</td>
+
+          <td class="participant">gorgEuro</td>
+
+          <td>
+            <div class="medal gold">2 (21)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">1 (8)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">5 (32)</div>
+          </td>
+
+          <td class="participations">
+            26
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">10</td>
+
+          <td class="participant">BeTeLGeuSe</td>
+
+          <td>
+            <div class="medal gold">2 (19)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">5 (49)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">3 (23)</div>
+          </td>
+
+          <td class="participations">
+            30
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">11</td>
+
+          <td class="participant">stan507</td>
+
+          <td>
+            <div class="medal gold">2 (19)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">3 (26)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">9 (56)</div>
+          </td>
+
+          <td class="participations">
+            26
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">12</td>
+
+          <td class="participant">mkokorovets</td>
+
+          <td>
+            <div class="medal gold">1 (11)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">2 (11)</div>
+          </td>
+
+          <td class="participations">
+            7
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">13</td>
+
+          <td class="participant">DavidsKV</td>
+
+          <td>
+            <div class="medal gold">1 (10)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">2 (19)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            7
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">14</td>
+
+          <td class="participant">Mishazakopajlo</td>
+
+          <td>
+            <div class="medal gold">1 (10)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">2 (18)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            5
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">15</td>
+
+          <td class="participant">dimka300688</td>
+
+          <td>
+            <div class="medal gold">1 (9)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            1
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">16</td>
+
+          <td class="participant">Gerrard8080</td>
+
+          <td>
+            <div class="medal gold">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">1 (8)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">1 (6)</div>
+          </td>
+
+          <td class="participations">
+            7
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">17</td>
+
+          <td class="participant">Sayda</td>
+
+          <td>
+            <div class="medal gold">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">1 (8)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            6
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">18</td>
+
+          <td class="participant">Leicester</td>
+
+          <td>
+            <div class="medal gold">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            1
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">19</td>
+
+          <td class="participant">arabijoni</td>
+
+          <td>
+            <div class="medal gold">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            1
+          </td>
+        </tr>
+    
+        <tr>
+          <td class="rank">20</td>
+
+          <td class="participant">midlan</td>
+
+          <td>
+            <div class="medal gold">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal silver">0 (0)</div>
+          </td>
+
+          <td>
+            <div class="medal bronze">0 (0)</div>
+          </td>
+
+          <td class="participations">
+            1
+          </td>
+        </tr>
+    
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
